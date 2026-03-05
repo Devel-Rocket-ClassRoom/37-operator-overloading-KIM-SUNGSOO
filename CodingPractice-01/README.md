@@ -68,8 +68,10 @@ True
 
 ## 5. 암시적 변환
 
-`Celsius` 구조체를 정의하고, `double`과의 암시적 변환 연산자를 양방향으로 오버로딩하세요.
-`Celsius temp = 36.5;`로 암시적 변환 후, `double value = temp;`로 다시 변환하여 출력하세요.
+`Celsius` 구조체를 정의하고, 
+`double`과의 암시적 변환 연산자를 양방향으로 오버로딩하세요.
+`Celsius temp = 36.5;`로 암시적 변환 후, 
+`double value = temp;`로 다시 변환하여 출력하세요.
 
 **실행 결과**
 
