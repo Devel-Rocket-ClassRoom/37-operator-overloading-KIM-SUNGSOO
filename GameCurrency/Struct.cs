@@ -12,8 +12,10 @@ struct GameCurrency
     {
         Gold = gold;
         Silver = silver;
+        Gold = gold + silver / 100;
+        Silver = silver % 100;
     }
-
+    
     public static GameCurrency operator +(GameCurrency a, GameCurrency b)
     {
         return new GameCurrency(a.Gold + b.Gold, a.Silver+b.Silver);
@@ -23,7 +25,15 @@ struct GameCurrency
         if(a.Gold > b.Gold)
             return new GameCurrency(a.Gold - b.Gold, a.Silver - b.Silver);
         else
-            return new GameCurrency(b.Gold - a.Gold, b.Silver - a.Silver);
+            return new GameCurrency(0, 0);
+    }
+    public static bool operator <(GameCurrency a, GameCurrency b)
+    {
+        return a.Gold < b.Gold;
+    }
+    public static bool operator >(GameCurrency a, GameCurrency b)
+    {
+        return a.Gold > b.Gold;
     }
     public static bool operator ==(GameCurrency g, GameCurrency s)
     {
@@ -34,6 +44,10 @@ struct GameCurrency
         return !(g==s);
     }
 
+    public int GetTotalSilver()
+    {
+        return Gold * 100 + Silver;
+    }
 
     public override string ToString()
     {
