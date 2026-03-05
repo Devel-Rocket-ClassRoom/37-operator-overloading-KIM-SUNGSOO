@@ -10,8 +10,10 @@
 ## 1. 명시적 변환
 
 `Celsius` 구조체와 `Fahrenheit` 구조체를 정의하세요.
-`Celsius`에서 `Fahrenheit`로, `Fahrenheit`에서 `Celsius`로의 명시적 변환 연산자를 오버로딩하세요.
-`Celsius(100)`을 생성한 후 `(Fahrenheit)c`로 변환하고, 두 값을 출력하세요.
+`Celsius`에서 `Fahrenheit`로, `Fahrenheit`에서 `Celsius`로의 
+명시적 변환 연산자를 오버로딩하세요.
+`Celsius(100)`을 생성한 후 `(Fahrenheit)c`로 변환하고, 
+두 값을 출력하세요.
 `ToString()`을 재정의하여 각각 `도수°C`, `도수°F` 형식으로 반환하세요.
 
 **실행 결과**
