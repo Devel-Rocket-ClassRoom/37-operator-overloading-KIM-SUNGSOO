@@ -54,4 +54,5 @@ struct GameCurrency
         return $"{Gold}G {Silver}S";
     }
 
+
 }
